@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="script.js"></script> -->
+    <title>Strange Quote Generator</title>
+
+    <script>
+        //Creating objects from quotes:
+
+        let quote1 = {
+            noun_phrase: "You ",
+            verb: "talk",
+            prepositional_phrase: "when you cease to be at peace with your thoughts.",
+            author_name: "Khalil",
+            author_last_name: "Gibran",
+        }
+
+        let quote2 = {
+            noun_phrase: "Man ",
+            verb: "is",
+            prepositional_phrase: " the only creature who refuses to be what he is.",
+            author_name: "Albert",
+            author_last_name: "Camus",
+        };
+
+        let quote3 = {
+            noun_phrase: "The most beautiful experience we can have ",
+            verb: "is",
+            prepositional_phrase: " the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science.",
+            author_name: "Albert",
+            author_last_name: "Einstein",
+        };
+
+        let quote4 = {
+            noun_phrase: "A man who ",
+            verb: "dares",
+            prepositional_phrase: " to waste one hour of time has not discovered the value of life.",
+            author_name: "Charles",
+            author_last_name: "Darwin",
+        };
+
+        let quote5 = {
+            noun_phrase: "The truth ",
+            verb: "is",
+            prepositional_phrase: "",
+            author_name: " rarely pure and never simple.",
+            author_last_name: "Oscar Wilde",
+        };
+
+        let quote6 = {
+            noun_phrase: "The fear of death ",
+            verb: "follows",
+            prepositional_phrase: " from the fear of life. A man who lives fully is prepared to die at any time.",
+            author_name: "Mark",
+            author_last_name: "Twain",
+        };
+
+        let quote7 = {
+            noun_phrase: "Death ",
+            verb: "is",
+            prepositional_phrase: " not the opposite of life, but a part of it.",
+            author_name: "Haruki",
+            author_last_name: "Murakami",
+        };
+
+        let quote8 = {
+            noun_phrase: "No one really ",
+            verb: "knows",
+            prepositional_phrase: " why they are alive until they know what they would die for.",
+            author_name: "Martin",
+            author_last_name: "Luther King Jr.",
+        };
+
+        let quote9 = {
+            noun_phrase: "It is not a lack of love, but a lack of friendship that ",
+            verb: "makes",
+            prepositional_phrase: " unhappy marriages.",
+            author_name: "Friedrich",
+            author_last_name: "Nietzsche",
+        };
+
+        let quote10 = {
+            noun_phrase: "Everything you can imagine ",
+            verb: "is",
+            prepositional_phrase: " real.",
+            author_name: "Pablo",
+            author_last_name: "Picasso",
+        };
+
+        // Array of quotes
+
+        let quotes_array = [quote1, quote2, quote3,
+            quote4, quote5, quote6,
+            quote7, quote8, quote9,
+            quote10
+        ];
+
+        // Select indexes for quotes
+
+        let noun_phrase_index = Math.floor(Math.random() * 10);
+        let verb_index = Math.floor(Math.random() * 10);
+        let prepositional_phrase_index = Math.floor(Math.random() * 10);
+        let name_index = Math.floor(Math.random() * 10);
+        let last_name_index = Math.floor(Math.random() * 10);
+
+        // Build random phrase
+
+        let result_phrase = '"' + quotes_array[noun_phrase_index].noun_phrase +
+            quotes_array[verb_index].verb +
+            quotes_array[prepositional_phrase_index].prepositional_phrase + '"  -' +
+            quotes_array[name_index].author_name + " " +
+            quotes_array[last_name_index].author_last_name
+
+        window.onload = function () {
+            var result = result_phrase;
+            document.getElementById('output').innerHTML = result;
+        };
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Welcome to the strange quotes generator</h1>
+    <br />
+    <h2>Quote of the day</h2>
+    <p id="output"></p>
+
+
+</body>
+
+</html>
